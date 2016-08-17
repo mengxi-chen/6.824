@@ -4,7 +4,8 @@ package main
 // see comments in lockd.go
 //
 
-import "lockservice"
+//import "lockservice"
+import "github.com/dimitar9/lockservice"
 import "os"
 import "fmt"
 

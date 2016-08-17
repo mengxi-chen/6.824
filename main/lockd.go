@@ -12,7 +12,8 @@ package main
 // instead of a and b.
 
 import "time"
-import "lockservice"
+//import "lockservice"
+import "github.com/dimitar9/lockservice"
 import "os"
 import "fmt"
 
