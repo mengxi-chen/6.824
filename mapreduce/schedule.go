@@ -45,16 +45,16 @@ func (mr *Master) schedule(phase jobPhase) {
 				args.NumOtherPhase = nios
 				args.Phase = phase
 
-                //inform worker to dotask
+                                //inform worker to dotask
 				ok := call(worker, "Worker.DoTask", args, new(struct{}))
 				if ok == false {
 				    fmt.Printf("fail to connect\n")
 				} else {
-					//collect worker resource
-                    go func() {
-		                mr.registerChannel <- worker
-	                }()
-                    break;
+			            //collect worker resource
+		                    go func() {
+				        mr.registerChannel <- worker
+			            }()
+		                    break;
 				}
             }
     	}(&wg, i)
